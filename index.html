@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUESTRA REALIDAD - ¿Quiénes Somos?</title>
+    <!-- Fuentes estilo clásico / libro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset y estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0d0b0a;
+            color: #e2d7c5;
+            font-family: 'Playfair Display', serif;
+            background-image: radial-gradient(rgba(20, 15, 10, 0.85), #050404);
+            min-height: 100vh;
+        }
+
+        /* Barra de Navegación */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: rgba(10, 8, 7, 0.95);
+            border-bottom: 1px solid #3a2e21;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-title {
+            font-family: 'Cinzel', serif;
+            font-style: italic;
+            color: #c9a050;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #b3a594;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #ebd197;
+            border-bottom: 1px solid #ebd197;
+            padding-bottom: 2px;
+        }
+
+        /* Encabezado Principal / Hero */
+        .hero {
+            text-align: center;
+            padding: 90px 20px 50px 20px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(13,11,10,1)), 
+                url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+            border-bottom: 1px solid #2a2015;
+        }
+
+        .institution {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: #a69279;
+            margin-bottom: 15px;
+        }
+
+        .main-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: #f1ebdd;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        /* Contenido Principal */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            color: #f1ebdd;
+            font-size: 2.2rem;
+            font-style: italic;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        /* Grid de Tarjetas de Integrantes */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Tarjetas Estilo Pergamino / Papiro */
+        .card {
+            background: linear-gradient(145deg, #cbba98, #a3906d);
+            color: #1a120b;
+            padding: 30px 20px;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6), inset 0 0 15px rgba(0,0,0,0.15);
+            border: 1px solid #827052;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #a94f3c;
+            margin-bottom: 12px;
+            text-decoration: underline;
+        }
+
+        .card .role {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #211911;
+            margin-bottom: 6px;
+        }
+
+        .card .subrole {
+            font-size: 0.8rem;
+            font-style: italic;
+            color: #3b2f21;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: #6e5e4d;
+            border-top: 1px solid #221a12;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación Superior -->
+    <nav class="navbar">
+        <div class="nav-title">Nuestra Realidad</div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">¿QUIÉNES SOMOS?</a></li>
+            <li><a href="#">CAPS 1-3</a></li>
+            <li><a href="#">CAPS 4-7</a></li>
+            <li><a href="#">BIOGRAFÍA</a></li>
+        </ul>
+    </nav>
+
+    <!-- Encabezado Principal / Hero -->
+    <header class="hero">
+        <p class="institution">INSTITUTO VOCACIONAL SAN JOSÉ • TRABAJO PARA TIC</p>
+        <h1 class="main-title">NUESTRA REALIDAD</h1>
+    </header>
+
+    <!-- Sección Quiénes Somos -->
+    <main class="container">
+        <h2 class="section-heading">NOSOTROS SOMOS</h2>
+
+        <section class="team-grid">
+            
+            <!-- Valentín Frías -->
+            <div class="card">
+                <h3>VALENTIN FRIAS</h3>
+                <p class="role">ENCARGADO DE LA REDACCIÓN DEL CAPÍTULO 1-7</p>
+            </div>
+
+            <!-- Felipe Décima -->
+            <div class="card">
+                <h3>DECIMA FELIPE</h3>
+                <p class="role">DESARROLLADOR DE LA PAGINA</p>
+                <p class="subrole">ENCARGADO DE LA REDACCIÓN DEL CAPITULO 2</p>
+            </div>
+
+            <!-- Facundo Argañaraz -->
+            <div class="card">
+                <h3>FACUNDO ARGAÑARAZ</h3>
+                <p class="role">DESARROLLADOR DE LA PAGINA</p>
+                <p class="subrole">ENCARGADO DE LA REDACCIÓN DEL CAPITULO 3</p>
+            </div>
+
+            <!-- Bautista Gómez -->
+            <div class="card">
+                <h3>BAUTISTA GOMEZ</h3>
+                <p class="role">DESARROLLADOR DE LA PAGINA</p>
+                <p class="subrole">ENCARGADO DE LA REDACCIÓN DEL CAPITULO 4</p>
+            </div>
+
+            <!-- Matías Nickler -->
+            <div class="card">
+                <h3>MATIAS NICKLER</h3>
+                <p class="role">ENCARGADO DE LA REDACCIÓN DEL CAPITULO 5</p>
+            </div>
+
+            <!-- Alex Saxe -->
+            <div class="card">
+                <h3>ALEX SAXE</h3>
+                <p class="role">ENCARGADO DE LA REDACCIÓN DEL CAPITULO 6</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>TRABAJO PARA TIC — 2026</p>
+    </footer>
+
+</body>
+</html>
